@@ -17,7 +17,7 @@ void loop() {
     if (nfc.tagPresent()) {
         NdefMessage message = NdefMessage();
         message.addTextRecord(""); // You can put a text message in the quotes here
-        message.addUriRecord("http://allaboutcircuits.com"); //You can put a url here if you want as well
+        message.addUriRecord(""); //You can put a url here if you want as well
         boolean success = nfc.write(message);
         if (success) {
             Serial.println("Good Job, now read it with your phone!"); // if it works you will see this message 
