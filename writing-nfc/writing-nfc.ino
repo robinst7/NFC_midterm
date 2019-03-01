@@ -16,8 +16,8 @@ void loop() {
   Serial.println("\nPlace an NFC Tag that you want to Record these Messages on!"); // Command for the Serial Monitor
     if (nfc.tagPresent()) {
         NdefMessage message = NdefMessage();
-        message.addTextRecord(""); // You can put a text message in the quotes here
-        message.addUriRecord(""); //You can put a url here if you want as well
+        message.addTextRecord("Hi! Here is a link to my gitHub"); // You can put a text message in the quotes here
+        message.addUriRecord("https://github.com/robinst7/NFC_midterm"); //You can put a url here if you want as well
         boolean success = nfc.write(message);
         if (success) {
             Serial.println("Good Job, now read it with your phone!"); // if it works you will see this message 
